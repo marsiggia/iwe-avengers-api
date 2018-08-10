@@ -1,148 +1,136 @@
-21:25:42.596 karate.env system property was: null 
-21:25:43.203 request:
-1 > GET https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/sdasdasdasdas
+22:39:09.890 karate.env system property was: null 
+22:39:10.277 request:
+1 > GET https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/1
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-21:25:44.186 response time in milliseconds: 982
+22:39:11.112 response time in milliseconds: 834
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 78
+1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Thu, 09 Aug 2018 00:25:44 GMT
-1 < x-amz-apigw-id: LVKBQER2iYcFRng=
-1 < x-amzn-RequestId: c0f43b54-9b6a-11e8-9e32-b7671dd35c3d
-{
-    id: "asdasd", 
-    name: "Iron Man", 
-    secretIdentity: "Tony Stark"
-}
+1 < Date: Fri, 10 Aug 2018 01:39:11 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b6cecbf-2ff0d9231513a2c1b35a34ea;Sampled=0
+1 < x-amz-apigw-id: LYnt2GX6CYcFd1g=
+1 < x-amzn-RequestId: 2e221174-9c3e-11e8-965d-e350312990ff
 
-21:25:44.339 karate.env system property was: null 
-21:25:44.351 request:
+
+22:39:11.147 assertion failed: path: $, actual: '', expected: '{"id":"#string","name":"Iron Man","secretIdentity":"Tony Stark"}', reason: not equal
+22:39:11.159 karate.env system property was: null 
+22:39:11.165 request:
 1 > POST https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Content-Length: 39
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Thor","secretIdentity":"Thor"}
 
-21:25:44.877 response time in milliseconds: 524
+22:39:11.691 response time in milliseconds: 526
 1 < 201
 1 < Connection: keep-alive
 1 < Content-Length: 63
 1 < Content-Type: application/json
-1 < Date: Thu, 09 Aug 2018 00:25:44 GMT
-1 < x-amz-apigw-id: LVKBXErciYcFeew=
-1 < x-amzn-RequestId: c15fa74a-9b6a-11e8-91c6-c98f4c40666f
+1 < Date: Fri, 10 Aug 2018 01:39:11 GMT
+1 < x-amz-apigw-id: LYnt8FPriYcF5dg=
+1 < x-amzn-RequestId: 2e7d0228-9c3e-11e8-aa80-63a1e8679fb0
 {
     id: '1', 
     name: 'Thor', 
     secretIdentity: 'Thor'
 }
 
-21:25:44.897 karate.env system property was: null 
-21:25:44.923 request:
-1 > PUT https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/asdasdasd
+22:39:11.703 karate.env system property was: null 
+22:39:11.708 request:
+1 > PUT https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Content-Length: 52
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Thor - Odin's Son","secretIdentity":"Thor"}
 
-21:25:45.484 response time in milliseconds: 560
+22:39:12.236 response time in milliseconds: 527
 1 < 200
 1 < Connection: keep-alive
 1 < Content-Length: 77
 1 < Content-Type: application/json
-1 < Date: Thu, 09 Aug 2018 00:25:45 GMT
-1 < x-amz-apigw-id: LVKBdHvKCYcFnaA=
-1 < x-amzn-RequestId: c1bae620-9b6a-11e8-8b8b-59e95f5d2f32
+1 < Date: Fri, 10 Aug 2018 01:39:12 GMT
+1 < x-amz-apigw-id: LYnuCGn-iYcFa_Q=
+1 < x-amzn-RequestId: 2ecfdd67-9c3e-11e8-aff4-31bb096f5283
 {
     id: '1', 
     name: 'Thor - Odin\'s Son', 
     secretIdentity: 'Thor'
 }
 
-21:25:45.517 karate.env system property was: null 
-21:25:45.522 request:
-1 > DELETE https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/asdasdasd
+22:39:12.248 karate.env system property was: null 
+22:39:12.250 request:
+1 > DELETE https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-21:25:46.047 response time in milliseconds: 525
-1 < 200
+22:39:12.789 response time in milliseconds: 539
+1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Thu, 09 Aug 2018 00:25:45 GMT
-1 < x-amz-apigw-id: LVKBjEYmiYcFVsQ=
-1 < x-amzn-RequestId: c212f18d-9b6a-11e8-b673-6f0a6330a4a1
+1 < Date: Fri, 10 Aug 2018 01:39:12 GMT
+1 < x-amz-apigw-id: LYnuHE27iYcF4Bg=
+1 < x-amzn-RequestId: 2f24b46c-9c3e-11e8-801c-95913b193d2f
+
+22:39:12.799 karate.env system property was: null 
+22:39:12.802 request:
+1 > POST https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 25
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Thor"}
+
+22:39:13.347 response time in milliseconds: 544
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:13 GMT
+1 < x-amz-apigw-id: LYnuNGyJCYcFXjQ=
+1 < x-amzn-RequestId: 2f78eecf-9c3e-11e8-91fa-a9fca477c0f1
+{"message": "Invalid request body"}
+
+22:39:13.356 karate.env system property was: null 
+22:39:13.358 request:
+1 > PUT https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 25
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Thor"}
+
+22:39:13.907 response time in milliseconds: 548
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:13 GMT
+1 < x-amz-apigw-id: LYnuSEluCYcFkIw=
+1 < x-amzn-RequestId: 2fcd77dc-9c3e-11e8-9236-535db27d66d5
+{"message": "Invalid request body"}
 
 
-RequestId: afbd5721-9b6a-11e8-a389-e7c118d2798d
-{"message":"Missing Authentication Token"}
-
-21:25:15.288 status code was: 403, expected: 200, response time: 522, url: https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers, response: {"message":"Missing Authentication Token"}
-372/style.css" />
-  <style>
-    .error {
-      text-align: center;
-    }
-    h1.error-code {
-      font-size: 15em;
-      color: #686868;
-    }
-    [data-dropdown="aws-nav-dropdown-lang"] {
-      display: none;
-    }
-  </style>
-  <script>
-    var AWS = {
-      PageSettings: {
-        supportedLanguages: ['en'],
-        defaultLanguage: 'en',
-        logDataSet: 'LIVE:PROD',
-        logInstance: 'PUB',
-        libraCSSPath: '//a0.awsstatic.com/libra-css/css/1.0.167'
-      }
-    };
-
-    var require = {
-      baseUrl: "//a0.awsstatic.com/chrome/js/1.0.401/",
-      paths: {
-        "jquery": "jquery-amd"
-      },
-      deps: ["scripts"],
-      shim: {
-        "scripts": ["jquery"],
-        "forms": ["jquery"],
-        "pricing-table": ["jquery", "scripts"],
-        "plugins/bootstrap.button": ["jquery"],
-        "plugins/bootstrap.collapse": ["jquery"],
-        "plugins/bootstrap.dropdown": ["jquery"],
-        "plugins/bootstrap.popover": ["jquery"],
-        "plugins/bootstrap.tab": ["jquery"],
-        "plugins/bootstrap.tooltip": ["jquery"],
-        "plugins/free-tier": ["jquery", "scripts"],
-        "plugins/jquery.caroufredsel": ["jquery"],
-        "plugins/jquery.fancybox": ["jquery"],
-        "plugins/jwplayer.html5": ["jquery"],
-        "plugins/jwplayer": ["jquery"],
-        "plugins/pbSize": ["jquery"],
-        "plugins/pushstate": ["jquery", "scripts"],
-        "plugins/search-controller": ["jquery"],
-        "plugins/jquery.touchSwipe": ["jquery"]
-      },
-      waitSeconds: 15
+: 538, url: https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/dasdasddas, response: {"id":"1","name":"Thor - Odin's Son","secretIdentity":"Thor"}
+}
+nds: 15
     };
   </script>
   <script src="//a0.awsstatic.com/chrome/js/1.0.401/head.2.0.js"></script>
