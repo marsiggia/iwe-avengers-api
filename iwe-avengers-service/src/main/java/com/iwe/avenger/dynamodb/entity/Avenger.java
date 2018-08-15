@@ -23,6 +23,11 @@ public class Avenger {
 		super();
 	}
 
+	@Override
+	public String toString() {
+		return "Avenger [id=" + id + ", name=" + name + ", secretIdentity=" + secretIdentity + "]";
+	}
+
 	public Avenger(String id, String name, String secretIdentity) {
 		super();
 		this.id = id;

@@ -46,3 +46,22 @@ And request {secretIdentity: 'Thor'}
 When method put
 Then status 400
 
+Scenario: Avenger Not Found
+
+Given path 'avengers', 'invalid'
+When method get
+Then status 404
+
+Scenario: Change Avenger NotFound
+
+Given path 'avengers', 'invalid'
+And request {name: 'Thor - Odin\'s Son', secretIdentity: 'Thor'}
+When method put
+Then status 404
+
+Scenario: Remove Avenger NotFound
+
+Given path 'avengers', 'invalid'
+When method delete
+Then status 404
+

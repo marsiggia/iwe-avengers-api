@@ -5,6 +5,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.iwe.avenger.dynamodb.entity.Avenger;
 import com.iwe.avenger.lambda.response.HandlerResponse;
 import com.iwe.avengers.dao.AvengerDAO;
+import com.iwe.avengers.util.AvengerUtil;
 
 public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 
@@ -15,7 +16,7 @@ public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		final String id = avenger.getId();
 		context.getLogger().log("[#] - Searching Avenger with id: "+id);
 		
-		final Avenger retrievedAvenger = dao.find(id);
+		final Avenger retrievedAvenger = AvengerUtil.validateAndRetrievesAvenger(id, dao);
 		
 		final HandlerResponse response = HandlerResponse
 													.builder()

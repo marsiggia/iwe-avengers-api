@@ -10,6 +10,12 @@ import java.util.Map;
 public class HandlerResponse {
 
 	private final int statusCode;
+	@Override
+	public String toString() {
+		return "HandlerResponse [statusCode=" + statusCode + ", body=" + body + ", headers=" + headers
+				+ ", isBase64Encoded=" + isBase64Encoded + "]";
+	}
+
 	private final String body;
 	private final Map<String, String> headers;
 	private final boolean isBase64Encoded;
