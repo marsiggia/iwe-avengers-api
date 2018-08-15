@@ -18,7 +18,7 @@ When method post
 Then status 201
 And match response == {id: '#string', name: 'Thor', secretIdentity: 'Thor'}
 
-Scenario: Change existing Avenger by ID
+Scenario: Update existing Avenger by ID
 
 Given path 'avengers', '2'
 And request {name: 'Thor - Odin\'s Son', secretIdentity: 'Thor'}
@@ -39,7 +39,7 @@ And request {secretIdentity: 'Thor'}
 When method post
 Then status 400
 
-Scenario: Change Avenger with Invalid Payload
+Scenario: Update Avenger with Invalid Payload
 
 Given path 'avengers', '2'
 And request {secretIdentity: 'Thor'}
@@ -52,16 +52,16 @@ Given path 'avengers', 'invalid'
 When method get
 Then status 404
 
-Scenario: Change Avenger NotFound
+Scenario: Update Avenger NotFound
 
 Given path 'avengers', 'invalid'
 And request {name: 'Thor - Odin\'s Son', secretIdentity: 'Thor'}
 When method put
 Then status 404
 
-#Scenario: Remove Avenger NotFound
+Scenario: Remove Avenger NotFound
 
-#Given path 'avengers', 'invalid'
-#When method delete
-#Then status 404
+Given path 'avengers', 'invalid'
+When method delete
+Then status 404
 

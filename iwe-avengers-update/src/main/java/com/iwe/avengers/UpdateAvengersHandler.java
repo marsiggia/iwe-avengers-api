@@ -22,11 +22,13 @@ public class UpdateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		
 		dao.update(avenger);
 		
+		context.getLogger().log("[#] - Avenger updated! id: "+avenger.getId());
+		
 		final HandlerResponse response = HandlerResponse
-				.builder()
-				.setStatusCode(200)
-				.setObjectBody(avenger)
-				.build();
+												.builder()
+												.setStatusCode(200)
+												.setObjectBody(avenger)
+												.build();
 		context.getLogger().log("[#] - Response:  "+response);
 		return response;
 	}

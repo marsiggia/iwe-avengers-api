@@ -31,4 +31,8 @@ public class AvengerDAO {
 		return avenger;
 	}
 
+	public void remove(Avenger avenger) {
+		mapper.remove(avenger.getId());
+	}
+
 }
