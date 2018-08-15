@@ -1,192 +1,184 @@
-22:39:09.890 karate.env system property was: null 
-22:39:10.277 request:
+15:38:43.566 karate.env system property was: null 
+15:38:44.100 request:
 1 > GET https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/1
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 
-22:39:11.112 response time in milliseconds: 834
+15:38:45.456 response time in milliseconds: 1356
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 0
+1 < Content-Length: 58
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:39:11 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b6cecbf-2ff0d9231513a2c1b35a34ea;Sampled=0
-1 < x-amz-apigw-id: LYnt2GX6CYcFd1g=
-1 < x-amzn-RequestId: 2e221174-9c3e-11e8-965d-e350312990ff
+1 < Date: Wed, 15 Aug 2018 18:38:45 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b747335-58211cbf82404b31623fc049;Sampled=0
+1 < x-amz-apigw-id: LrbwVHzBiYcFwFw=
+1 < x-amzn-RequestId: 70e3f94a-a0ba-11e8-9c17-b5ef901f7ac8
+{"id":"1","name":"Iron Man","secretIdentity":"Tony Stark"}
 
-
-22:39:11.147 assertion failed: path: $, actual: '', expected: '{"id":"#string","name":"Iron Man","secretIdentity":"Tony Stark"}', reason: not equal
-22:39:11.159 karate.env system property was: null 
-22:39:11.165 request:
+15:38:45.567 karate.env system property was: null 
+15:38:45.584 request:
 1 > POST https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Content-Length: 39
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 {"name":"Thor","secretIdentity":"Thor"}
 
-22:39:11.691 response time in milliseconds: 526
+15:38:46.140 response time in milliseconds: 556
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 63
+1 < Content-Length: 48
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:39:11 GMT
-1 < x-amz-apigw-id: LYnt8FPriYcF5dg=
-1 < x-amzn-RequestId: 2e7d0228-9c3e-11e8-aa80-63a1e8679fb0
-{
-    id: '1', 
-    name: 'Thor', 
-    secretIdentity: 'Thor'
-}
+1 < Date: Wed, 15 Aug 2018 18:38:46 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b747336-cc2828b0f318b72670c7bfc8;Sampled=0
+1 < x-amz-apigw-id: LrbwcG-kCYcF4Lg=
+1 < x-amzn-RequestId: 7152c11b-a0ba-11e8-ba69-59cb611d09af
+{"id":"2","name":"Thor","secretIdentity":"Thor"}
 
-22:39:11.703 karate.env system property was: null 
-22:39:11.708 request:
+15:38:46.186 karate.env system property was: null 
+15:38:46.202 request:
 1 > PUT https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Content-Length: 52
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 {"name":"Thor - Odin's Son","secretIdentity":"Thor"}
 
-22:39:12.236 response time in milliseconds: 527
+15:38:46.781 response time in milliseconds: 579
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 77
+1 < Content-Length: 61
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:39:12 GMT
-1 < x-amz-apigw-id: LYnuCGn-iYcFa_Q=
-1 < x-amzn-RequestId: 2ecfdd67-9c3e-11e8-aff4-31bb096f5283
-{
-    id: '1', 
-    name: 'Thor - Odin\'s Son', 
-    secretIdentity: 'Thor'
-}
+1 < Date: Wed, 15 Aug 2018 18:38:46 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b747336-6ca18afb020e1e7cb1c76897;Sampled=0
+1 < x-amz-apigw-id: LrbwiG_nCYcFzqw=
+1 < x-amzn-RequestId: 71b2e292-a0ba-11e8-a4aa-a30dcb107c6f
+{"id":"2","name":"Thor - Odin's Son","secretIdentity":"Thor"}
 
-22:39:12.248 karate.env system property was: null 
-22:39:12.250 request:
+15:38:46.809 karate.env system property was: null 
+15:38:46.814 request:
 1 > DELETE https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 
-22:39:12.789 response time in milliseconds: 539
+15:38:47.333 response time in milliseconds: 518
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:39:12 GMT
-1 < x-amz-apigw-id: LYnuHE27iYcF4Bg=
-1 < x-amzn-RequestId: 2f24b46c-9c3e-11e8-801c-95913b193d2f
+1 < Date: Wed, 15 Aug 2018 18:38:47 GMT
+1 < x-amz-apigw-id: LrbwoHVeiYcFxXw=
+1 < x-amzn-RequestId: 720c7403-a0ba-11e8-ab6a-3377791ea871
 
-22:39:12.799 karate.env system property was: null 
-22:39:12.802 request:
+15:38:47.373 karate.env system property was: null 
+15:38:47.387 request:
 1 > POST https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Content-Length: 25
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 {"secretIdentity":"Thor"}
 
-22:39:13.347 response time in milliseconds: 544
+15:38:47.916 response time in milliseconds: 527
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:39:13 GMT
-1 < x-amz-apigw-id: LYnuNGyJCYcFXjQ=
-1 < x-amzn-RequestId: 2f78eecf-9c3e-11e8-91fa-a9fca477c0f1
+1 < Date: Wed, 15 Aug 2018 18:38:47 GMT
+1 < x-amz-apigw-id: LrbwuGNCiYcFoLw=
+1 < x-amzn-RequestId: 7264cdb3-a0ba-11e8-86b5-87ad864f3050
 {"message": "Invalid request body"}
 
-22:39:13.356 karate.env system property was: null 
-22:39:13.358 request:
+15:38:47.934 karate.env system property was: null 
+15:38:47.938 request:
 1 > PUT https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Content-Length: 25
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 {"secretIdentity":"Thor"}
 
-22:39:13.907 response time in milliseconds: 548
+15:38:48.466 response time in milliseconds: 528
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:39:13 GMT
-1 < x-amz-apigw-id: LYnuSEluCYcFkIw=
-1 < x-amzn-RequestId: 2fcd77dc-9c3e-11e8-9236-535db27d66d5
+1 < Date: Wed, 15 Aug 2018 18:38:48 GMT
+1 < x-amz-apigw-id: LrbwzHNAiYcFqnw=
+1 < x-amzn-RequestId: 72b89290-a0ba-11e8-85b0-d71311c4458a
 {"message": "Invalid request body"}
 
+15:38:48.494 karate.env system property was: null 
+15:38:48.516 request:
+1 > GET https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
 
-: 538, url: https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/dasdasddas, response: {"id":"1","name":"Thor - Odin's Son","secretIdentity":"Thor"}
-}
-nds: 15
-    };
-  </script>
-  <script src="//a0.awsstatic.com/chrome/js/1.0.401/head.2.0.js"></script>
-  <script src="//a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js"></script>
-  <script src="//a0.awsstatic.com/target/1.0.96/aws-target-mediator.js"></script>
-</head>
-<body>
+15:38:49.060 response time in milliseconds: 543
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 319
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 18:38:48 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b747338-fbe6e180d1956a784eec8360;Sampled=0
+1 < x-amz-apigw-id: Lrbw5EqWCYcFkIw=
+1 < x-amzn-RequestId: 7310c491-a0ba-11e8-a1ee-6533af2d20ef
+{"errorMessage":"[NotFound] - Avenger id: invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:22)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
 
-  <header id="aws-page-header" class="aws" role="banner"> 
- <div id="aws-nav" class="aws-nav" role="navigation"> 
-  <div class="aws-nav-header"> 
-   <div class="aws-nav-header-left"> 
-    <div id="aws-nav-flyout-trigger" class="aws-nav-flyout-trigger" data-flyout="aws-nav-flyout-1-root" tabindex="1"> 
-     <i class="aws-nav-icon-reorder"></i>Menu 
-    </div> 
-    <div class="aws-bg-logo lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
-     <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
-    </div> 
-    <div id="aws-nav-quicklinks" class="aws-nav-quicklinks"> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/contact-us/?nc2=h_ql_cu" style="color: #e9903a">Contact Sales</a> 
-     </div> 
-     <div class="aws-nav-quicklink aws-nav-popover-trigger" data-dropdown="aws-nav-dropdown-products"> 
-      <a href="https://aws.amazon.com/products/?nc2=h_ql_p">Products<i class="icon-caret-down"></i></a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/solutions/?nc2=h_ql_s">Solutions</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/pricing/?nc2=h_ql_pr">Pricing</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/getting-started/?nc2=h_ql_gs">Getting Started</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/documentation/?nc2=h_ql_d">Documentation</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/marketplace/ref=mkt_ste_ql_4?nc2=h_ql_s">AWS Marketplace</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/premiumsupport/?nc2=h_ql_su">Support</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/solutions/case-studies/?nc2=h_ql_c">Customers</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/partners/?nc2=h_ql_p">Partners</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/enterprise/?nc2=h_ql_e">Enterprises</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/startups/?nc2=h_ql_st">Startups</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
+15:38:49.082 karate.env system property was: null 
+15:38:49.090 request:
+1 > PUT https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 52
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
+{"name":"Thor - Odin's Son","secretIdentity":"Thor"}
+
+15:38:49.625 response time in milliseconds: 535
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 404
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 18:38:49 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b747339-16e5020297b88f409cc90582;Sampled=0
+1 < x-amz-apigw-id: Lrbw_EvriYcF89g=
+1 < x-amzn-RequestId: 7366fb60-a0ba-11e8-8b4a-37d0d1181bd6
+{"errorMessage":"[NotFound] - Avenger id: invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.util.AvengerUtil.validateAndRetrievesAvenger(AvengerUtil.java:13)","com.iwe.avengers.UpdateAvengersHandler.handleRequest(UpdateAvengersHandler.java:19)","com.iwe.avengers.UpdateAvengersHandler.handleRequest(UpdateAvengersHandler.java:1)"]}
+
+ers/invalid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 6elf5xvhvl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/9)
+
+13:46:30.432 response time in milliseconds: 556
+1 < 204
+1 < Connection: keep-alive
+1 < Content-Length: 0
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 16:46:30 GMT
+1 < x-amz-apigw-id: LrLT_GLPCYcFVsQ=
+1 < x-amzn-RequestId: c2887f67-a0aa-11e8-955d-45e4b68fab56
+
+13:46:30.433 status code was: 204, expected: 404, response time: 556, url: https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid, response: 
+
+   <div class="aws-nav-quicklink"> 
       <a href="https://aws.amazon.com/government-education/?nc2=h_ql_ps">Public Sector</a> 
      </div> 
      <div class="aws-nav-quicklink"> 
