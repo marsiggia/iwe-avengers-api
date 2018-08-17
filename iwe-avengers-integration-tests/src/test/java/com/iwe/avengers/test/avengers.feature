@@ -2,13 +2,13 @@ Feature: Perform integrated tests on the Avengers registration API
 
 Background:
 * url 'https://6elf5xvhvl.execute-api.us-east-2.amazonaws.com/dev'
+#nao é auto suficiente por isso foi comentado
+#Scenario: Get Avenger by Id
 
-Scenario: Get Avenger by Id
-
-Given path 'avengers', '1'
-When method get
-Then status 200
-And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
+#Given path 'avengers', '1'
+#When method get
+#Then status 200
+#And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
 
 Scenario: Registry new Avenger
 
@@ -18,13 +18,25 @@ When method post
 Then status 201
 And match response == {id: '#string', name: 'Thor', secretIdentity: 'Thor'}
 
+* def savedAvenger = response
+Given path 'avengers', savedAvenger.id
+When method get
+Then status 200
+And match $ == savedAvenger
+
+
+
+
+
+
 Scenario: Update existing Avenger by ID
 
 Given path 'avengers', '2'
-And request {name: 'Thor - Odin\'s Son', secretIdentity: 'Thor'}
+And request {name: 'Thor -', secretIdentity: 'Thor'}
 When method put
 Then status 200
-And match response == {id: '#string', name: 'Thor - Odin\'s Son', secretIdentity: 'Thor'}
+And match response == {id: '#string', name: 'Thor -', secretIdentity: 'Thor'}
+
 
 Scenario: Remove existing Avenger
 

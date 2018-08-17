@@ -1,28 +1,29 @@
 package com.iwe.avengers;
 
+import java.util.NoSuchElementException;
+
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.iwe.avenger.dynamodb.entity.Avenger;
+import com.iwe.avenger.lambda.exception.AvengerNotFoundException;
 import com.iwe.avenger.lambda.response.HandlerResponse;
 import com.iwe.avengers.dao.AvengerDAO;
-import com.iwe.avengers.util.AvengerUtil;
 
 public class UpdateAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 
-	private AvengerDAO dao = new AvengerDAO();
+	private AvengerDAO dao = AvengerDAO.getInstance();
 	
 	@Override
 	public HandlerResponse handleRequest(final Avenger avenger, final Context context) {
 		context.getLogger().log("[#] - Updating Avenger with id: "+avenger.getId());
 		context.getLogger().log("[#] - Avenger: "+avenger);
-		
-		AvengerUtil.validateAndRetrievesAvenger(avenger.getId(), dao);
-		
-		context.getLogger().log("[#] - Avenger exists! id: "+avenger.getId());
-		
-		dao.update(avenger);
-		
-		context.getLogger().log("[#] - Avenger updated! id: "+avenger.getId());
+		try {
+			dao.find(avenger.getId());
+			dao.save(avenger);
+		} catch (NoSuchElementException e) {
+			throw new AvengerNotFoundException("[NotFound] - Avenger id: "+avenger.getId()+" not found");
+		}
+		context.getLogger().log("[#] - Avenger updated: "+avenger);
 		
 		final HandlerResponse response = HandlerResponse
 												.builder()
