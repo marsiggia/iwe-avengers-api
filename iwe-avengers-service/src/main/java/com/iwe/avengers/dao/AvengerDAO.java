@@ -34,7 +34,7 @@ public class AvengerDAO {
 	}
 
 	public void remove(Avenger avenger) {
-		//mapper.delete(avenger.getId());
+		mapper.delete(avenger.getId());
 	}
 
 }

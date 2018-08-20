@@ -13,36 +13,66 @@ Background:
 Scenario: Registry new Avenger
 
 Given path 'avengers'
-And request {name: 'Thor', secretIdentity: 'Thor'}
+And request {name: 'Iron Man', secretIdentity: 'Tony Stark'}
 When method post
 Then status 201
-And match response == {id: '#string', name: 'Thor', secretIdentity: 'Thor'}
+And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
 
 * def savedAvenger = response
+
+#Get Avenger by Id
 Given path 'avengers', savedAvenger.id
 When method get
 Then status 200
 And match $ == savedAvenger
 
-
-
-
-
-
 Scenario: Update existing Avenger by ID
 
-Given path 'avengers', '2'
-And request {name: 'Thor -', secretIdentity: 'Thor'}
+#Create Avenger by Id
+Given path 'avengers'
+And request {name: 'Thor', secretIdentity: 'Thor'}
+When method post
+Then status 201
+And match response == {id: '#string', name: 'Thor', secretIdentity: 'Thor'}
+
+* def createdAvenger = response
+
+#Update Avenger by Id
+Given path 'avengers', createdAvenger.id
+And request {name: 'Thor - Odin\'s son', secretIdentity: 'Thor - The Lightining God'}
 When method put
 Then status 200
-And match response == {id: '#string', name: 'Thor -', secretIdentity: 'Thor'}
+And match $.id == createdAvenger.id
+And match $.name == 'Thor - Odin\'s son' 
+And match $.secretIdentity == 'Thor - The Lightining God'
 
+* def updatedAvenger = response
+
+#Get Avenger by Id
+Given path 'avengers', updatedAvenger.id
+When method get
+Then status 200
+And match $ == updatedAvenger
 
 Scenario: Remove existing Avenger
 
-Given path 'avengers', '2'
+#Create Avenger
+Given path 'avengers'
+And request {name: 'Hulk', secretIdentity: 'Bruce Banner'}
+When method post
+Then status 201
+
+* def avengerToRemove = response
+
+#Delete Avenger by Id
+Given path 'avengers', avengerToRemove.id
 When method delete
 Then status 204
+
+#Get Avenger by Id should return 404
+Given path 'avengers', avengerToRemove.id
+When method get
+Then status 404
 
 Scenario: Registry Avenger with Invalid Payload
 
