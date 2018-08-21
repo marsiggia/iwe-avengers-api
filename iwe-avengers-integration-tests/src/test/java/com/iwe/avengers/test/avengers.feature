@@ -10,6 +10,12 @@ Background:
 #Then status 200
 #And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
 
+Scenario: Should return Unauthorized access
+
+Given path 'avengers', 'anyid'
+When method get
+Then status 401
+
 Scenario: Registry new Avenger
 
 Given path 'avengers'
@@ -82,6 +88,15 @@ When method post
 Then status 400
 
 Scenario: Update Avenger with Invalid Payload
+
+#Create Avenger by Id
+Given path 'avengers'
+And request {name: 'Captain America', secretIdentity: 'Stieve Rogers'}
+When method post
+Then status 201
+And match response == {id: '#string', name: 'Captain America', secretIdentity: 'Stieve Rogers'}
+
+* def createdAvenger = response
 
 Given path 'avengers', '2'
 And request {secretIdentity: 'Thor'}
